@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/dataList"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/setCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="0"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@id/etReps"/>
+
+    <EditText
+        android:id="@+id/etReps"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/setCount"
+        android:hint="REPS"
+        android:inputType="number"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textAlignment="textEnd"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="X"
+        android:layout_toEndOf="@id/etReps"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@id/setCount"/>
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="WEIGHT"
+        android:inputType="number"
+        android:textSize="30sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textAlignment="textEnd"
+        android:layout_toEndOf="@+id/txtX"
+        android:layout_marginStart="5dp" />
+    <TextView
+        android:id="@+id/txtKG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="KG"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/etWeight"
+        android:layout_alignBaseline="@id/setCount"/>
+
+</RelativeLayout>

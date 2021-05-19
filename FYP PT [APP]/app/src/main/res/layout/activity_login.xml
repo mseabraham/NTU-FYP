@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="#1282A2">
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:hint="Username"
+        android:paddingLeft="60dp"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:inputType="textEmailAddress"
+        android:layout_width="286dp"
+        android:layout_height="45dp"/>
+    <EditText
+        android:id="@+id/etPass"
+        android:layout_below="@id/etEmail"
+        android:hint="Password"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="286dp"
+        android:layout_height="45dp"
+        android:singleLine="true"
+        android:inputType="textPassword"/>
+
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_below="@id/etPass"
+        android:layout_marginTop="30dp"
+        android:layout_width="286dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btnLogin"
+        android:onClick="logIn"
+        android:background="#FF4F79"/>
+
+
+    <Button
+        android:id="@+id/btSignup"
+        android:layout_width="286dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/btLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="goSignUp"
+        android:text="@string/btnReg"
+        android:background="#034078"/>
+
+</RelativeLayout>

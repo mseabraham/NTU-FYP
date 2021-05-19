@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainerFragment.NewClientFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#17183B">
+        <LinearLayout
+            android:id="@+id/lytExercise"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@drawable/bdr_inbox"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bnrCli"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2d2d2d"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_marginTop="80dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#2b2d2f">
+                    <EditText
+                        android:id="@+id/dspName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:ems="10"
+                        android:hint="@string/edtDisp"
+                        android:singleLine="true"
+                        android:inputType="textEmailAddress" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:ems="10"
+                        android:hint="@string/edtEmail"
+                        android:layout_below="@id/dspName"
+                        android:singleLine="true"
+                        android:inputType="textEmailAddress" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="25dp"
+                        android:ems="10"
+                        android:hint="@string/edtPass"
+                        android:layout_below="@id/email"
+                        android:singleLine="true"
+                        android:inputType="textPassword" />
+                </RelativeLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnNewClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Add New Client"
+                android:textColor="#FF4F79"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/btnAddLower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Cancel"
+                android:textColor="#FF4F79"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:onClick="newExe"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

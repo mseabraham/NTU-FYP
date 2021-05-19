@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#17183B">
+    <RelativeLayout
+        android:id="@+id/schBorder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarView"
+            android:dateTextAppearance="@style/CalenderViewDateCustomText"
+            android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+            android:theme="@style/CustomCalendarMonth"
+            android:background="#FEFCFB"/>
+
+        <LinearLayout
+            android:id="@+id/date_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_above="@id/btnSrcDate"
+            android:layout_below="@id/calendarView">
+            <!-- date title -->
+            <TextView
+                android:id="@+id/date_display_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="normal"
+                android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+                android:textColor="#FEFCFB"
+                android:text="2018"/>
+            <!-- date title -->
+            <TextView
+                android:id="@+id/date_display_date"
+                android:layout_width="wrap_content"
+                android:layout_height="72dp"
+                android:gravity="center"
+                android:textSize="55sp"
+                android:textStyle="bold"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="#FEFCFB"
+                android:text="17 Feb"/>
+            <!-- date title -->
+            <TextView
+                android:id="@+id/date_display_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="#FEFCFB"
+                android:text="Saturday"/>
+
+            <Button
+                android:id="@+id/date_display_today"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:textSize="11sp"
+                android:text="Go to today"
+                android:textColor="#FEFCFB"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnSrcDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Search"
+            android:textColor="#FF4F79"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainerFragment.BookFragment"
+    android:background="#17183B">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarView"
+            android:dateTextAppearance="@style/CalenderViewDateCustomText"
+            android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+            android:theme="@style/CustomCalendarMonth"
+            android:background="#FEFCFB"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/clientInfo"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/calendarView">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bdr_inbox">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/prvwDate"
+                    android:textSize="20sp"
+                    android:textColor="#2d2d2d"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bdr_inbox"/>
+
+                <TextView
+                    android:id="@+id/bnrBookTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignEnd="@id/bnrBookExe"
+                    android:text="@string/bnrBookTime"
+                    android:textStyle="bold"
+                    android:textColor="#2d2d2d"
+                    android:layout_below="@id/prvwDate"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@id/bnrBookTime"
+                    android:layout_below="@id/prvwDate"
+                    android:background="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/spnTime"
+                    android:id="@+id/in_time"
+                    android:text=":00"
+                    android:textSize="20sp"
+                    android:textColor="#2d2d2d"
+                    android:layout_alignBaseline="@id/spnTime"
+                    android:layout_below="@id/prvwDate"/>
+
+                <TextView
+                    android:id="@+id/bnrBookClient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignEnd="@id/bnrBookExe"
+                    android:text="@string/bnrBookClient"
+                    android:textStyle="bold"
+                    android:textColor="#2d2d2d"
+                    android:layout_below="@id/in_time"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/bnrBookClient"
+                    android:layout_alignEnd="@id/prvwDate"
+                    android:layout_below="@id/in_time"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@null"/>
+
+                <TextView
+                    android:id="@+id/bnrBookExe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/bnrBookExe"
+                    android:textStyle="bold"
+                    android:textColor="#2d2d2d"
+                    android:layout_below="@id/bnrBookClient"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnExe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/bnrBookExe"
+                    android:layout_alignEnd="@id/prvwDate"
+                    android:layout_below="@id/bnrBookClient"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@null" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="@string/btnBook"
+            android:textColor="#FEFCFB"
+            android:textStyle="bold"
+            android:layout_margin="0dp"
+            android:background="#1282A2"
+            android:layout_alignParentBottom="true"/>
+
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>
